@@ -7,7 +7,7 @@ export const Login = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(credentials);
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://react-app-navy-theta.vercel.app/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
