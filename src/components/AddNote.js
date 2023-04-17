@@ -6,16 +6,20 @@ export const AddNote = () => {
     const [note, setNote] = useState({
         title : "",
         description : "",
-        tag : ""
+        tag : "",
+        pt1 : 0,
+        pt2 : 0
     })
     const {addNote} = context;
     const handleClick = (e) => {
         e.preventDefault();
-        addNote(note.title, note.description, note.tag);
+        addNote(note.title, note.description, note.tag, note.p1, note.pt2);
         setNote({
             title : "",
             description : "",
-            tag : ""
+            tag : "",
+            pt1 : 0,
+            pt2 : 0
         })
     }
     const onChange = (e) => {
@@ -36,6 +40,14 @@ export const AddNote = () => {
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">PNR Number</label>
                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="tag" value={note.tag}/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">PT-1 Marks</label>
+                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.pt1}/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="exampleInputPassword1" className="form-label">PT-2 Marksr</label>
+                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.pt2}/>
                 </div>
                 <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button>
             </form>

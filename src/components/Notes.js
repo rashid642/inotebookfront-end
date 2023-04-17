@@ -58,9 +58,19 @@ const Notes = () => {
                                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="edescription" value={note.edescription} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    
+
                                     <label htmlFor="exampleInputPassword1" className="form-label">PNR Number</label>
                                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="etag" value={note.etag} minLength={5} required/>
+                                </div>
+                                <div className="mb-3">
+                                    
+                                    <label htmlFor="exampleInputPassword1" className="form-label">PT-1 Marks</label>
+                                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.etag} minLength={5} required/>
+                                </div>
+                                <div className="mb-3">
+                                    
+                                    <label htmlFor="exampleInputPassword1" className="form-label">PT-2 Marks</label>
+                                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.etag} minLength={5} required/>
                                 </div>
                                 {/* <button type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button> */}
                             </form>
