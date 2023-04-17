@@ -19,7 +19,7 @@ export const Navbar = () => {
                 <Link className={`nav-link ${location.pathname==="/about" ? "active" : ""}`} to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="#">Notes</Link>
+                <Link className="nav-link" to="#">Students</Link>
             </li>
             {
                 !localStorage.getItem('token') ? <><li className='nav-item'>

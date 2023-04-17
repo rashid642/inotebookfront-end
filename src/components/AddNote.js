@@ -23,18 +23,18 @@ export const AddNote = () => {
     }
     return (
         <div>
-            <h2>Add a Note</h2>
+            <h2>Add a Student</h2>
             <form>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Title of Note</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Name of Student</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={onChange} name="title" minLength={5} required value={note.title}/>
                 </div> 
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Enter Description</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label">Course Enrolled</label>
                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="description" minLength={5} required value={note.description}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Enter Tag</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label">PNR Number</label>
                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="tag" value={note.tag}/>
                 </div>
                 <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button>

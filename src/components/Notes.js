@@ -44,21 +44,22 @@ const Notes = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Edit Student details</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
                             <form>
                                 <div className="mb-3">
-                                    <label htmlFor="exampleInputEmail1" className="form-label">Title of Note</label>
+                                    <label htmlFor="exampleInputEmail1" className="form-label">Name of Student</label>
                                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={onChange} name="etitle" value={note.etitle}/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="exampleInputPassword1" className="form-label">Enter Description</label>
+                                    <label htmlFor="exampleInputPassword1" className="form-label">Course Enrolled</label>
                                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="edescription" value={note.edescription} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="exampleInputPassword1" className="form-label">Enter Tag</label>
+                                    
+                                    <label htmlFor="exampleInputPassword1" className="form-label">PNR Number</label>
                                     <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="etag" value={note.etag} minLength={5} required/>
                                 </div>
                                 {/* <button type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button> */}
