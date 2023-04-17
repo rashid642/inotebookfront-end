@@ -1,8 +1,10 @@
+// const host = "https://react-app-navy-theta.vercel.app"
 import React, { useState } from "react";
 import NoteContext from "./NoteContext";
 
 const NoteState = (props) => {
-    const host = "https://react-app-navy-theta.vercel.app"
+  const host = "https://react-app-navy-theta.vercel.app"
+  // const host = "http://localhost:5000"
     const notesinitial = [];
     const [notes, setNotes] = useState(notesinitial)
   
@@ -21,6 +23,8 @@ const NoteState = (props) => {
 
     // Add a note
       const addNote = async (title, description, tag, pt1, pt2) => {
+        console.log("inside add note",title, description, pt1, pt2)
+        pt1 = 20
         const response = await fetch(`${host}/api/notes/addnote`, {
           method: 'POST', 
           headers: {
