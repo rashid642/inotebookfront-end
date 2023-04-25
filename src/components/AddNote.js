@@ -13,7 +13,8 @@ export const AddNote = () => {
     const {addNote} = context;
     const handleClick = (e) => {
         e.preventDefault();
-        addNote(note.title, note.description, note.tag, note.p1, note.pt2);
+        addNote(note.title, note.description, note.tag, note.pt1, note.pt2);
+        console.log(note,"sgsergw")
         setNote({
             title : "",
             description : "",
