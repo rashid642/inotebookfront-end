@@ -18,17 +18,19 @@ const Notes = () => {
         id : "",
         etitle : "",
         edescription : "",
-        etag : ""
+        etag : "",
+        pt1 : 0,
+        pt2 : 0
     })
     const ref = useRef(null)
     const refclose = useRef(null)
     const updateNote = (currentnote) => {
         ref.current.click();
-        setNote({id : currentnote._id, etitle: currentnote.title, edescription: currentnote.description, etag: currentnote.tag});
+        setNote({id : currentnote._id, etitle: currentnote.title, edescription: currentnote.description, etag: currentnote.tag, pt1 : currentnote.pt1, pt2 : currentnote.pt2});
     }
     const handleClick = (e) => {
         e.preventDefault();
-        editNote(note.id, note.etitle, note.edescription, note.etag);
+        editNote(note.id, note.etitle, note.edescription, note.etag, note.pt1, note.pt2);
         refclose.current.click();
     }
     const onChange = (e) => {
@@ -65,12 +67,12 @@ const Notes = () => {
                                 <div className="mb-3">
                                     
                                     <label htmlFor="exampleInputPassword1" className="form-label">PT-1 Marks</label>
-                                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.etag} minLength={5} required/>
+                                    <input type="number" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.pt2} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     
                                     <label htmlFor="exampleInputPassword1" className="form-label">PT-2 Marks</label>
-                                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.etag} minLength={5} required/>
+                                    <input type="number" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.pt1} minLength={5} required/>
                                 </div>
                                 {/* <button type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button> */}
                             </form>
