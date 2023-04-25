@@ -88,7 +88,7 @@ const Notes = () => {
             <div className='row my-3'>
                 <h2>Student List</h2>
                 <div className='container'>
-                    {notes.length === 0 && "No Notes to display"}
+                    {notes.length === 0 && "You have not added any students yet"}
                 </div>
                 {notes.map((note) => {
                     return <NotesItem key={note._id} updateNote={updateNote} note={note} />
