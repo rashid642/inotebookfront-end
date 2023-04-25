@@ -43,11 +43,11 @@ export const AddNote = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">PT-1 Marks</label>
-                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.pt1}/>
+                    <input type="number" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt1" value={note.pt1}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">PT-2 Marksr</label>
-                    <input type="text" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.pt2}/>
+                    <label htmlFor="exampleInputPassword1" className="form-label">PT-2 Marks</label>
+                    <input type="number" className="form-control" id="exampleInputPassword1" onChange={onChange} name="pt2" value={note.pt2}/>
                 </div>
                 <button disabled={note.title.length < 5 || note.description.length < 5} type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button>
             </form>

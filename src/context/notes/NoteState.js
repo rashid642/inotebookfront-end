@@ -24,7 +24,7 @@ const NoteState = (props) => {
     // Add a note
       const addNote = async (title, description, tag, pt1, pt2) => {
         console.log("inside add note",title, description, pt1, pt2)
-        pt1 = 20
+        
         const response = await fetch(`${host}/api/notes/addnote`, {
           method: 'POST', 
           headers: {
